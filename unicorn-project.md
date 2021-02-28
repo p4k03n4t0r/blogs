@@ -1,6 +1,6 @@
 # The Unicorn Project
 
-The last time I did a book review was probably somehwere in highschool, but it might be fun to do another one. The Unicorn Project is a book which tries to teach you more about how developers should and shouldn't work within an organization. The thing which makes this book interesting, is that it's not a book with only pure theory. The book actually has a story following some characters while it tries to teach you things, which made me really enjoy this book. Although The Unicorn Project has precessor called The Phoenix Project, it's relevent for me. The Phoenix Project is more from the perspective of operations, while The Unicorn Project is from the perspective of developers. The Phoenix Project is still interesting to read and even as a developer there are things you can learn from it.
+The last time I did a book review was probably some time ago in highschool, but it might be fun to do another one. Although I still enjoy reading literature like George Orwells 1986, I also read books related to IT. The Unicorn Project is such a book which tries to teach you more about how developers should and shouldn't work within an organization. The thing which makes this book interesting, is that it's not a book with only pure theory. The book actually contains a story via which it tries to teach you things, which made me really enjoy this book. Although The Unicorn Project has precessor called The Phoenix Project, the first one named is more relevent for me. The Phoenix Project is written from the perspective of IT operations within a big organization, while The Unicorn Project is from the perspective of developers. Still, the Phoenix Project is interesting to read and even as a developer there are things you can learn from it.
 
 ## The story
 
@@ -12,7 +12,8 @@ During the book the rebellion receives help in the form of five ideals. These id
 
 ### 1. Locality and Simplicity
 
-On day one have everything working on your laptop and push a small change to production.
+On day one have everything working on your laptop and push a small change to production. According to me this is a good measurement about the locality and simplicity.
+
 In the book the architecture comitee
 
 ### 2. Focus, Flow and Joy
@@ -34,3 +35,17 @@ In my experience, didn't expect it to be this bad, but I found it out that it's 
 The IT products I built and the IT products in the book are mostly build for people, but actually asking people what he or she wants is sometimes pretty rare.
 Maxine follows meeloopdag, learns that an app isn't used, because it doesn't work well for the employees
 From my experience actually talking with people who use it teaches me so much. I worked in a organisation which does scientific research, but the first few months I rarely talked at all with researchers while I was building a product for them. After reading The Unicorn Project I actually started talking with them and this gave me new insights on what they want (and what they don't want). I learned that the researchers were actually interested in something which was actually easy to build, but was valuable for them.
+
+## DevOps
+
+The main theme of this book is DevOps, all of the ideals are part of being a good DevOps organisation. For me this is a vague thing, I thought it was just about Dev and Ops working together, but there's much more to it. This change brings so many improvements and solves many issues in current, big organisations. Some facts that Gene Kim (the writer) showed during one of his presentation really made the impact of DevOps clear for me:
+Measurement | Elite | Low | Difference
+Deployment frequency | On-demand (multiple times per day) | Monthly or quarterly | 208x
+Deployment lead time | < 1 hour | 1 week to 1 month | 106x
+Deploy success rate | 0-15% | 46-60% | 7x
+Mean time to restore | < 1 hour | Less than one day | 2,604x
+Difference between elite and low performers based on the State of DevOps report of 2019
+
+## Conclusion
+
+It was fun to do another book review, although it was a bit different from the ones I did in highschool. I didn't talk to much about the quality of writing, but I added a lot of my own experience to compensate. I definitely think the book is interesting to read and shows in a fun way the impact DevOps can have on every organisation. By it being written as a real life story, it made me also look at my current and previous working environment. It's fun to read the book with others and identify similar patterns on your own environment and improve these.
