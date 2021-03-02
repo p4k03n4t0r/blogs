@@ -129,7 +129,7 @@ So with these HTTP requests we managed to bypass the filter on the proxy and rea
 
 In the example above the proxy uses the `Transfer-Encoding` (TE) header and the server uses the `Content-Length` (CL) header. This is called TE-CL request smuggling, but there are of course more possibilities:
 
-- **CL-TE**: for an example see: https://ctftime.org/writeup/20655. This setup is also included in the https://github.com/p4k03n4t0r/http-request-smuggling-demo[demo repository].
+- **CL-TE**: for an example see: https://ctftime.org/writeup/20655. This setup is also included in the [https://github.com/p4k03n4t0r/http-request-smuggling-demo](demo repository).
 - **CL-CL**: for example if we supply multiple `Content-Length` headers, there could be different interpretations about which one indicates the length of the body.
 - **TE-TE**: for example if there are multiple chunks with length `0`, there could be different interpretations about which one is the real indication of the end of the body.
 
