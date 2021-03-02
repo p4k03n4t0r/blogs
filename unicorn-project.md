@@ -12,11 +12,13 @@ During the book the rebellion receives help in the form of five ideals. These id
 
 ### 1. Locality and Simplicity
 
-On day one have everything working on your laptop and push a small change to production. According to me this is a good measurement about the locality and simplicity.
-"everyone has different approaches, some want to read the documentation first"
-"my experience frightened me, we don't want to do this to new people"
+In the book clearly struggles with the first ideal when she joins the Phoenix project. It's (nearly) impossible for her to get the build working on her machine. This clearly showed that there was no locality in the systems or simplicity in the depedencies of the project. I have a strong opinion that person who is new on the project, independent of their programming experience, should be able to push a small change to production on their first day. If a team can't do this or can't even get close, I think it's a sign there still a lot of improvements possible (and necessary) on the first ideal.
 
-In the book the architecture comitee
+In one of my teams I had this exact situation and had a discussion with the other team members about this when a new team member was about to join us. A person said that his experience when he joined the organization frightened him. There was a lot of help needed from the helpdesk to get access to the mail and other things. Thus he didn't want to put pressure on a new person to push anything to production. I agreed with him that there shouldn't be put any presure on new people joining the team, but getting a code change in production is just a measurement, not the goal. It's a good way to show issues in the locality and simplicity of the team. For example it could be necessary to install a lot of undocumented, unlogical depedencies on the laptop to get everything working. The people already on the team went through this and got everything working, so don't think there are any issues. A new person with a clean laptop can painfully expose this.
+
+Another person said that everyone has different approaches on how they start, some just want to read the documentation first. Although I understand everyone has different approaches, I think the goal of everyone on the team should be to deliver value. The way to do this is to add changes to the code and deploy these to production for the user to use, not by reading documentation. Documentation is important, but it should be something to support that process, not the goal. Just deploying a code change to production on your first day should make every developer happy and something to give you a big energy boost when you freshly join a project. This is actually part of the second ideal, joy.
+
+In the book there was a architecture comitee, which I found quite funny. All big changes within the IT landscape of the company had to pass the comitee, but this rarely happened. For example they still found Apache Tomcat a risk, while this is used all over the internet. During a talk of the writer I saw this example was actually based on a real life example, so it wasn't something he just came up with.
 
 ### 2. Focus, Flow and Joy
 
@@ -58,11 +60,12 @@ From my experience actually talking with people who use it teaches me so much. I
 
 The main theme of this book is DevOps, all of the ideals are part of being a good DevOps organisation. For me this is a vague thing, I thought it was just about Dev and Ops working together, but there's much more to it. This change brings so many improvements and solves many issues in current, big organisations. Some facts that Gene Kim (the writer) showed during one of his presentation really made the impact of DevOps clear for me:
 Measurement | Elite | Low | Difference
+--- | --- | --- | ---
 Deployment frequency | On-demand (multiple times per day) | Monthly or quarterly | 208x
 Deployment lead time | < 1 hour | 1 week to 1 month | 106x
 Deploy success rate | 0-15% | 46-60% | 7x
 Mean time to restore | < 1 hour | Less than one day | 2,604x
-Difference between elite and low performers based on the State of DevOps report of 2019
+_Difference between elite and low performers based on the [State of DevOps report of 2019](https://services.google.com/fh/files/misc/state-of-devops-2019.pdf)_
 
 ## Conclusion
 
