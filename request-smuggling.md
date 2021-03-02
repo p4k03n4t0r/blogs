@@ -6,7 +6,7 @@ In this blog post I’ll be taking a look at request smuggling, which could util
 
 ## HTTP requests
 
-An HTTP request always follows a specification which can be found in the rfc2616 spec (https://tools.ietf.org/html/rfc2616). This specification describes how HTTP should work in an abstract way and I’ll be referring to it later on. All proxies, webservers and HTTP clients should follow this specification.
+An HTTP request always follows a specification which can be found in the [rfc2616 spec](https://tools.ietf.org/html/rfc2616). This specification describes how HTTP should work in an abstract way and I’ll be referring to it later on. All proxies, webservers and HTTP clients should follow this specification.
 
 An HTTP request can include a body, where the length of this body must be indicated. Two ways to do this are:
 
@@ -38,7 +38,7 @@ The proxy uses the content length 11 to decide the body length. Of course line b
 
 ## Request smuggling using Mitmproxy and Gunicorn
 
-The last paragraph has the assumption that a proxy and server intepretate the headers differently. This https://blog.deteact.com/gunicorn-http-request-smuggling/[blog] describes a writeup for a CTF where it was necessary to abuse request smuggling. In the CTF challenge the setup used mitmproxy as the proxy and Gunicorn for the server. If you look at the code how they implement the parsing of the `Transfer-Encoding` header the issue is quite easy to spot:
+The last paragraph has the assumption that a proxy and server intepretate the headers differently. This [blog](https://blog.deteact.com/gunicorn-http-request-smuggling) describes a writeup for a CTF where it was necessary to abuse request smuggling. In the CTF challenge the setup used mitmproxy as the proxy and Gunicorn for the server. If you look at the code how they implement the parsing of the `Transfer-Encoding` header the issue is quite easy to spot:
 
 ```python
 # from https://github.com/mitmproxy/mitmproxy/blob/master/mitmproxy/net/http/http1/read.py#L78
@@ -55,7 +55,7 @@ The last paragraph has the assumption that a proxy and server intepretate the he
 
 Mitmproxy checks whether `chunked` is in the header, while Gunicorn checks whether the whole value of the header matches `chunked`. So if we sent a header which has as value `chunkedasd`, mitmproxy will parse the body using chunked encoding, while Gunicorn will fall back on the content length.
 
-The blogpost nicely describes how this can be exploited in the CTF, but I thought it would be better to simplify the setup and write my own exploit. In https://github.com/p4k03n4t0r/http-request-smuggling-demo[this repository] I created this setup and the example to execute the request smuggling. The question still remains how can we abuse this mismatch between the proxy and the server? In the demo setup I made we have a `/flag` endpoint which returns a secret which is only reachable from within the network, because the proxy blocks the request:
+The blogpost nicely describes how this can be exploited in the CTF, but I thought it would be better to simplify the setup and write my own exploit. In [this repository](https://github.com/p4k03n4t0r/http-request-smuggling-demo) I created this setup and the example to execute the request smuggling. The question still remains how can we abuse this mismatch between the proxy and the server? In the demo setup I made we have a `/flag` endpoint which returns a secret which is only reachable from within the network, because the proxy blocks the request:
 
 ```
 > curl localhost:8002/flag
@@ -129,11 +129,11 @@ So with these HTTP requests we managed to bypass the filter on the proxy and rea
 
 In the example above the proxy uses the `Transfer-Encoding` (TE) header and the server uses the `Content-Length` (CL) header. This is called TE-CL request smuggling, but there are of course more possibilities:
 
-- **CL-TE**: for an example see: https://ctftime.org/writeup/20655. This setup is also included in the [https://github.com/p4k03n4t0r/http-request-smuggling-demo](demo repository).
+- **CL-TE**: for an example see [this writeup](https://ctftime.org/writeup/20655). This setup is also included in the [demo repository](https://github.com/p4k03n4t0r/http-request-smuggling-demo).
 - **CL-CL**: for example if we supply multiple `Content-Length` headers, there could be different interpretations about which one indicates the length of the body.
 - **TE-TE**: for example if there are multiple chunks with length `0`, there could be different interpretations about which one is the real indication of the end of the body.
 
-In this post we played around with the lenght of the body to smuggle an additional request, but there are of course other ways to achieve this. Take for example this post (https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-via-http/2-cleartext-h2c), in which is described how upgrading a HTTP/1.1 connection to HTTP/2 allows smuggling of requests.
+In this post we played around with the lenght of the body to smuggle an additional request, but there are of course other ways to achieve this. Take for example [this post](https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-via-http/2-cleartext-h2c), in which is described how upgrading a HTTP/1.1 connection to HTTP/2 allows smuggling of requests.
 
 In my opinion request smuggling can be abstracted as follows:
 

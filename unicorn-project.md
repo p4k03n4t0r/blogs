@@ -8,7 +8,7 @@ The story follows Maxine, a senior developer with a few decades of experience. S
 
 ## The five ideals
 
-During the book the rebellion receives help in the form of five ideals. These ideals guide them on solving the companies issues and prevent them from falling back into them. I want to illustrate each of them with a combintation of examples in the book and my own experience within the world of IT. A short description of the ideals can be found in a [https://itrevolution.com/five-ideals-of-devops/](blogpost) by Gene Kim, the author of the book.
+During the book the rebellion receives help in the form of five ideals. These ideals guide them on solving the companies issues and prevent them from falling back into them. I want to illustrate each of them with a combintation of examples in the book and my own experience within the world of IT. A short description of the ideals can be found in a [blogpost](https://itrevolution.com/five-ideals-of-devops/) by Gene Kim, the author of the book.
 
 ### 1. Locality and Simplicity
 
