@@ -1,4 +1,4 @@
-# The Unicorn Project
+# The Unicorn Project: DevOps
 
 The last time I did a book review was probably some time ago in highschool, but it might be fun to do another one. Although I still enjoy reading literature like George Orwells 1986, I also read books related to IT. The Unicorn Project is such a book which tries to teach you more about how developers should and shouldn't work within an organization. The thing which makes this book interesting, is that it's not a book with only pure theory. The book actually contains a story via which it tries to teach you things, which made me really enjoy this book. Although The Unicorn Project has precessor called The Phoenix Project, the first one named is more relevent for me. The Phoenix Project is written from the perspective of IT operations within a big organization, while The Unicorn Project is from the perspective of developers. Still, the Phoenix Project is interesting to read and even as a developer there are things you can learn from it.
 
@@ -22,39 +22,46 @@ In the book there was a architecture comitee, which I found quite funny. All big
 
 ### 2. Focus, Flow and Joy
 
-Process steps:
+This ideal is about focus on value and working in the right flow resulting in joy. In the book Maxine didn't find any joy in the Phoenix project at first due the lack of focus and flow. She started with creating a flow for programmers so they could focus on delivering value, instead of just firefighting.
 
-- Stable environment able to run everywhere
-  -- Cool would be automated deployment of an environment: infrastructure as code (what I learned is that this should also be treated as code, so DRY, versioning and other design patterns)
-- Automated deployment to test env (pipeline also in code, also treat as code)
-- Automatic testing in pipeline
-- Automatic security reports generated
-- Documentation about the product (for internal and external)
+The projects I worked on weren't that bad as the Phoenix project luckily. Based on Maxine's approach in the book and my own experience I came up with a list of steps to create a flow in which developers can focus on value:
+
+- A stable environment is needed which is able to run everywhere. This prevents mismatches between different dev environments of programmers and test/production environments resulting in programs not running.
+  - If the deployment to environments is automated via Infrastructure as Code would be really cool. From my own experience this simplifies things so much, for example for a pen test you can just spin up a new environment within no time and destroy it after the test with just a few clicks.
+  - If you use Infrastructure as Code, I learned that it should also be treated as code. Of course this sounds a bit self explanatory, but in hindsight this made things for the project I was on much easier. By applying best practices like DRY, versioning of releases and other design patterns, it prevents pitfalls they also fix for normal coding.
+- Automated deployment (CI/CD) to test and production environments via a pipeline. Of course this pipeline can also be written in code, where the same things apply as the previous point. CI/CD as code should also be treated as code.
+- Add test automation in the pipeline. Where I prefer integration and smoke tests above unit tests, since those actually test the whole infrastructure resulting in catching more 'real' problems.
+- Add automatic generation of security reports in the pipeline.
+- Add documentation about the product for internal and external use.
 
 Maxine visiting the school; often run your code, seeing it run is part of the fun
 Me: test out new things within the context of the project I work on. Just spin it up and throw 'realistic' load at it.
 
 ### 3. Improvement of Daily Work
 
-Making mistakes is okay (even in production; p258-259), as long as you learn from them. Post mortems are valuable. I did them too and thought about them too lightly and thought we would just look at the problem and prevent this specific problem from happening again. But it's much wider, you can learn much more from it. By it being a specific problem, it allows you to not fantasize about things to learn. You can find improvements that actually work, because you can discuss whether it would prevent the problem from happening again. I have been in many meetings where solutions were given for fictional problems, which would lead to lengthy discussions without any knowledge being gained from it.
+The third ideal is about improvement of daily work, where Gene Kim gives some interesting ways to do this. For example he says that the most experienced developers should be working on improving on daily work instead of just work. These improvements have a much bigger impact, because they can impact multiple teams instead of just a single team. In many organizations these important tasks are assigned to juniors or even interns.
 
-A quote I read in 'take time to slow down':
-Life teaches us through mistakes.
-When you make a mistake,
-simply ask yourself what you were meant to learn from it.
-When we accept such lessons with humility and gratitude,
-we grow that much more.
+Another thing I learned from the book is that making mistakes is okay (even in production as illustrated in the book). By making mistakes you can learn from them and improve the next time. A way to do this are blameless post mortems. After reading the book I also did them after we had a production issue. At first I thought about the blameless post mortems too lightly and thought we would just look at the problem and prevent this specific problem from happening again. But they can add much more value, there's more to gain from them. By it being a concrete problem, it allows you to improve based a real problem, instead of fantasizing dubious solutions to a fictional problem. You can find improvements that actually work, because you can discuss whether it would prevent the problem from happening again. I have been in many meetings where solutions were given for fictional problems, which would lead to lengthy discussions without any knowledge being gained from it. They would often end in yes/no debate based on emotion instead of facts.
+
+After finishing the Unicorn project I read the 'take time to slow down', which I think quite nicely summarizes an important part of the third ideal for me:
+
+> _Life teaches us through mistakes._\
+> _When you make a mistake,_\
+> _simply ask yourself what you were meant to learn from it._\
+> _When we accept such lessons with humility and gratitude,_\
+> _we grow that much more._
 
 ### 4. Psychological Safety
 
-In the book Sarah blames everyone, unrealistic expectations
-In my experience, didn't expect it to be this bad, but I found it out that it's still relevant. Slowly found out that the team was slowly being divided into two groups: me and the others. During discussions we didn't come to a conclusion and the discussions often ended with going for either their way a bit moved to my view to do a concession for me, so I should be satisfied too. But I was getting more unhappy, because I wasn't understood and often just left it at the concession instead of trying to tell my perspective again. This was during the Covid period where we worked remotely as a team for several months, so this didn't help in glueing this and made it possible for it to get this far. I realized that psychological safety was getting in the way of me delivering value and enjoying my work, because me not being understood and getting more and more ignored.
+This ideal, psychological safety, is easy to overlook since it can't be put as an user story on the backlog. In the book Sarah embodies the opposite of psychological safety. She blames everyone for her own problems and has unrealistic expectations of others. As a character she was a funny addition to the book, but I hope I will never have to work with someone like her.
+
+In my experience, I didn't expect psychological safety to be a problem, but I found it out that it doesn't always naturally. I slowly found out that the team was being divided into two groups: me and the others. During discussions we didn't come to a conclusion. The discussions often ended with going for their way, but a bit moved to my view so I should be satisfied too. But I was getting more unhappy, because I wasn't being understood. This was during the Covid period where we worked remotely as a team for several months, so this didn't make it easier and was probably a big part of the problem. I realized that psychological safety was getting in the way of me delivering value and enjoying my work, because I wasn't being understood and often just gave up on trying to give my opinion.
 
 ### 5. Customer Focus
 
-The IT products I built and the IT products in the book are mostly build for people, but actually asking people what he or she wants is sometimes pretty rare.
-Maxine follows meeloopdag, learns that an app isn't used, because it doesn't work well for the employees
-From my experience actually talking with people who use it teaches me so much. I worked in a organisation which does scientific research, but the first few months I rarely talked at all with researchers while I was building a product for them. After reading The Unicorn Project I actually started talking with them and this gave me new insights on what they want (and what they don't want). I learned that the researchers were actually interested in something which was actually easy to build, but was valuable for them.
+Lastly, but at least as important as the others the fifth ideal: customer focus. The IT products I built and the IT products in the book are mostly build for people, but actually asking people what he or she wants is sometimes pretty rare. Maxine follows a short traineeship for in store personel and she sees the daily work of people working in the shops of the company. She learns that they have tablets with apps specifically made for them, but they don't use it because it's not user friendly.
+
+From my experience actually talking with people who use it teaches me so much. I worked in a organisation which does scientific research, but the first few months I rarely talked at all with researchers while I was building a product for them. After reading The Unicorn Project I actually started talking with them and this gave me new insights on what they want (and what they don't want). I learned that the researchers were actually interested in something which was easy to build, but was really valuable for them.
 
 ## DevOps
 
@@ -65,8 +72,9 @@ Deployment frequency | On-demand (multiple times per day) | Monthly or quarterly
 Deployment lead time | < 1 hour | 1 week to 1 month | 106x
 Deploy success rate | 0-15% | 46-60% | 7x
 Mean time to restore | < 1 hour | Less than one day | 2,604x
+
 _Difference between elite and low performers based on the [State of DevOps report of 2019](https://services.google.com/fh/files/misc/state-of-devops-2019.pdf)_
 
 ## Conclusion
 
-It was fun to do another book review, although it was a bit different from the ones I did in highschool. I didn't talk to much about the quality of writing, but I added a lot of my own experience to compensate. I definitely think the book is interesting to read and shows in a fun way the impact DevOps can have on every organisation. By it being written as a real life story, it made me also look at my current and previous working environment. It's fun to read the book with others and identify similar patterns on your own environment and improve these.
+It was fun to do another book review, although it was a bit different from the ones I did in highschool. I didn't give my opinion about the book that much, but I added a lot of my own experience to compensate. Which is a good plus point for the book, since it inspired me to think about these things and look at them from my own perspective. By it being written as a real life story, it helped me in looking at my current and previous working environment. It's fun to read the book with others and identify similar patterns on your own environment and improve these. So I definitely think the book is interesting to read and shows in a fun way the positive impact DevOps can have on every organisation.
