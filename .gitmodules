@@ -1,9 +1,6 @@
 [submodule "python-gadgets"]
 	path = python-gadgets
 	url = git@github.com:p4k03n4t0r/python-gadgets.git
-[submodule "http-request-smuggling-demo"]
-	path = http-request-smuggling-demo
-	url = git@github.com:p4k03n4t0r/http-request-smuggling-demo.git
 [submodule "http-request-smuggling"]
 	path = http-request-smuggling
 	url = git@github.com:p4k03n4t0r/http-request-smuggling.git
