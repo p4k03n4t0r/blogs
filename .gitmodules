@@ -7,3 +7,6 @@
 [submodule "http-request-smuggling"]
 	path = http-request-smuggling
 	url = git@github.com:p4k03n4t0r/http-request-smuggling.git
+[submodule "testing-in-python"]
+	path = testing-in-python
+	url = git@github.com:p4k03n4t0r/testing-in-python.git
