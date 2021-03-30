@@ -2,3 +2,4 @@
 **/.pytest_cache/**
 **/.coverage
 **/.vscode/**
+**/.mypy_cache/**
