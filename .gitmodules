@@ -7,3 +7,6 @@
 [submodule "testing-in-python"]
 	path = testing-in-python
 	url = git@github.com:p4k03n4t0r/testing-in-python.git
+[submodule "protocols-in-python"]
+	path = protocols-in-python
+	url = git@github.com:p4k03n4t0r/protocols-in-python.git
