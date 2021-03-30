@@ -1,0 +1,3 @@
+[submodule "python-gadgets"]
+	path = python-gadgets
+	url = git@github.com:p4k03n4t0r/python-gadgets.git

@@ -34,9 +34,6 @@ The projects I worked on weren't that bad as the Phoenix project luckily. Based 
 - Add automatic generation of security reports in the pipeline.
 - Add documentation about the product for internal and external use.
 
-Maxine visiting the school; often run your code, seeing it run is part of the fun
-Me: test out new things within the context of the project I work on. Just spin it up and throw 'realistic' load at it.
-
 ### 3. Improvement of Daily Work
 
 The third ideal is about improvement of daily work, where Gene Kim gives some interesting ways to do this. For example he says that the most experienced developers should be working on improving on daily work instead of just work. These improvements have a much bigger impact, because they can impact multiple teams instead of just a single team. In many organizations these important tasks are assigned to juniors or even interns.
