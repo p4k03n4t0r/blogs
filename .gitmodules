@@ -1,12 +1,16 @@
 [submodule "python-gadgets"]
 	path = python-gadgets
 	url = git@github.com:p4k03n4t0r/python-gadgets.git
+	branch = master
 [submodule "http-request-smuggling"]
 	path = http-request-smuggling
 	url = git@github.com:p4k03n4t0r/http-request-smuggling.git
+	branch = master
 [submodule "testing-in-python"]
 	path = testing-in-python
 	url = git@github.com:p4k03n4t0r/testing-in-python.git
+	branch = master
 [submodule "protocols-in-python"]
 	path = protocols-in-python
 	url = git@github.com:p4k03n4t0r/protocols-in-python.git
+	branch = master

@@ -63,12 +63,12 @@ From my experience actually talking with people who use it teaches me so much. I
 ## DevOps
 
 The main theme of this book is DevOps, all of the ideals are part of being a good DevOps organisation. For me this is a vague thing, I thought it was just about Dev and Ops working together, but there's much more to it. This change brings so many improvements and solves many issues in current, big organisations. Some facts that Gene Kim (the writer) showed during one of his presentation really made the impact of DevOps clear for me:
-Measurement | Elite | Low | Difference
---- | --- | --- | ---
-Deployment frequency | On-demand (multiple times per day) | Monthly or quarterly | 208x
-Deployment lead time | < 1 hour | 1 week to 1 month | 106x
-Deploy success rate | 0-15% | 46-60% | 7x
-Mean time to restore | < 1 hour | Less than one day | 2,604x
+| Measurement          | Elite                              | Low                  | Difference |
+| -------------------- | ---------------------------------- | -------------------- | ---------- |
+| Deployment frequency | On-demand (multiple times per day) | Monthly or quarterly | 208x       |
+| Deployment lead time | < 1 hour                           | 1 week to 1 month    | 106x       |
+| Deploy success rate  | 0-15%                              | 46-60%               | 7x         |
+| Mean time to restore | < 1 hour                           | Less than one day    | 2,604x     |
 
 _Difference between elite and low performers based on the [State of DevOps report of 2019](https://services.google.com/fh/files/misc/state-of-devops-2019.pdf)_
 
